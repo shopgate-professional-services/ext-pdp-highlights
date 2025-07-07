@@ -37,7 +37,7 @@ export const makeGetProductPropertiesAndTags = () => {
     getProductId,
     getProducts,
     (productProperties, productId, products) => {
-      const product = products[productId];
+      const product = products?.[productId]?.productData;
       let properties = [];
       let tags = [];
 
@@ -115,7 +115,7 @@ export const makeGetHighlights = () => {
           );
         } else if (type === 'tag' && tag) {
           match = propertiesAndTags.tags.find(
-            entry => entry === tag
+            entry => entry.trim() === tag.trim()
           );
         } else if (type === 'static') {
           match = true;
