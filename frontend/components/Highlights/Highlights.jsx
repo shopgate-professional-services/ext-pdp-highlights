@@ -25,6 +25,10 @@ const styles = {
     alignItems: 'center',
     ...highlightStyle,
   }),
+  svgSpanWrapper: css({
+    // Neutralize the span wrapper of full SVG icons to simplify styling
+    display: 'contents',
+  }),
 };
 
 /**
@@ -55,8 +59,16 @@ const Highlights = () => {
             highlight?.style && typeof highlight.style === 'object' && css(highlight.style)
           )}
         >
-          { highlight.content.icon && (
-            <Icon content={highlight.content.icon} size={28} />
+          { highlight?.content?.icon && (highlight.content.icon.startsWith('<svg')
+            ? <span
+              className={styles.svgSpanWrapper}
+              dangerouslySetInnerHTML={{ __html: highlight.content.icon }}
+            />
+            : <Icon
+              content={highlight.content.icon}
+              size={28}
+              viewBox={highlight.content.viewBox}
+            />
           )}
           {highlight.content.text && (
             <span>{highlight.content.text}</span>

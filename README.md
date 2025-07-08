@@ -19,7 +19,9 @@ Each entry has a `type` property with `static`, `property` and `tag` as possible
 - `property` highlights are visible when the currently visible product has a property that matches the config of the `property` (object) - see example
 - `tag` highlights are visible when the currently visible product matches the value of the `tag` property (string) - see example
 
-Each entry can be configured with a `content` property (object) that can contain an `icon` property (string) that contains an SVG path and a `text` property (string) for the highlight label.
+Each entry can be configured with a `content` property (object) that can contain an `icon` property (string) and a `text` property (string) for the highlight label.
+
+The `icon` property value can either be a *svg path* which needs to fit into a *24x24 viewbox*, or a full SVG.
 
 Additionally it's possible to configured the individual styling of each highlight via the `style` property (object).
 
@@ -49,7 +51,7 @@ Additionally it's possible to configured the individual styling of each highligh
         "value": "Property Value",
       },
       "content": {
-        "icon": "<path />",
+        "icon": "<svg width="60" height="28" viewBox="0 0 60 28"/>",
         "text": "Property Highlight"
       },
       "style": {
