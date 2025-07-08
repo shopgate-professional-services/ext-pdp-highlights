@@ -115,7 +115,7 @@ export const makeGetHighlights = () => {
           );
         } else if (type === 'tag' && tag) {
           match = propertiesAndTags.tags.find(
-            entry => entry.trim() === tag.trim()
+            entry => entry?.trim() === tag?.trim()
           );
         } else if (type === 'static') {
           match = true;
