@@ -102,6 +102,10 @@ export const makeGetHighlights = () => {
     (propertiesAndTags) => {
       const result = [];
 
+      if (!Array.isArray(highlights) || highlights.length === 0) {
+        return result;
+      }
+
       for (let i = 0; i < highlights.length; i += 1) {
         const {
           type, property, tag, content, style = {},

@@ -73,7 +73,7 @@ Additionally it's possible to configured the individual styling of each highligh
 #### portalPosition (string)
 The portal position where the product highlights are supposed to be shown (*default*: `product.header.after`).
 
-Possible portal positions are: `product.header.before`, `product.header.before`, `product.header.after`, `product.variant-select.before`, `product.variant-select.after`, `product.description.before`, `product.description.after`, `product.properties.before`, `product.properties.after`
+Possible portal positions are: `product.header.before`, `product.header.after`, `product.variant-select.before`, `product.variant-select.after`, `product.description.before`, `product.description.after`, `product.properties.before`, `product.properties.after`
 
 ##### Example
 ```json
