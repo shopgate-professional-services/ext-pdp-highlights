@@ -1,0 +1,68 @@
+{
+  "version": "1.0.0-beta.3",
+  "id": "@shopgate-project/pdp-highlights",
+  "components": [
+  {
+      "id": "Highlights",
+      "type": "portals",
+      "path": "frontend/portals/Highlights",
+      "target": [
+        "product.header.before",
+        "product.header.after",
+        "product.variant-select.before",
+        "product.variant-select.after",
+        "product.description.before",
+        "product.description.after",
+        "product.properties.before",
+        "product.properties.after"
+      ]
+    }
+  ],
+  "configuration": {
+    "highlights": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": [],
+      "params": {
+        "type": "json",
+        "label": "Highlights"
+      }
+    },
+    "maxDisplayCount": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": 3,
+      "params": {
+        "type": "number",
+        "label": "Maximum number of highlights to display"
+      }
+    },
+    "containerStyle": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": null,
+      "params": {
+        "type": "json",
+        "label": "Styling for the highlights container"
+      }
+    },
+    "highlightStyle": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": null,
+      "params": {
+        "type": "json",
+        "label": "Styling for the highlights"
+      }
+    },
+    "portalPosition": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "product.header.after",
+      "params": {
+        "type": "string",
+        "label": "Portal position"
+      }
+    }
+  }
+}
